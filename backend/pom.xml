@@ -58,6 +58,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
+                    <mainClass>book.tracker.BookTrackerApp</mainClass>
                     <excludes>
                         <exclude>
                             <groupId>org.springframework.boot</groupId>
