@@ -4,7 +4,7 @@ package book.tracker.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -34,52 +34,52 @@ public class Book {
     @Size(max = 100, message = "Genre must not exceed 100 characters")
     private String genre;
 
-
-    public Book(String atitle, String aauthor, LocalDate apublishedDate, String agenre) {
-        this.title = atitle;
-        this.author = aauthor;
-        this.publishedDate = apublishedDate;
-        this.genre = agenre;
+    public Book() {}
+    public Book(String aTitle, String aAuthor, LocalDate aPublishedDate, String aGenre) {
+        this.title = aTitle;
+        this.author = aAuthor;
+        this.publishedDate = aPublishedDate;
+        this.genre = aGenre;
     }
 
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(Long aId) {
+        this.id = aId;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setTitle(String aTitle) {
+        this.title = aTitle;
     }
 
     public String getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setAuthor(String aAuthor) {
+        this.author = aAuthor;
     }
 
     public LocalDate getPublishedDate() {
         return publishedDate;
     }
 
-    public void setPublishedDate(LocalDate publishedDate) {
-        this.publishedDate = publishedDate;
+    public void setPublishedDate(LocalDate aPublishedDate) {
+        this.publishedDate = aPublishedDate;
     }
 
     public String getGenre() {
         return genre;
     }
 
-    public void setGenre(String genre) {
-        this.genre = genre;
+    public void setGenre(String aGenre) {
+        this.genre = aGenre;
     }
 
     @Override
